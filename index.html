@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition App by Dipesh</title>
+    <style>
+        *{font-size :50px; font-family: Calibri;}
+        body{background-color: lightblue;}
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Addition App</h1>
+        <form onsubmit="add()">
+            <input tupe="number" step="any" placeholder="Enter First Number" id="num1" />
+            <br><br>
+            <input tupe="number" step="any" placeholder="Enter Second Number" id="num2" />
+            <br><br>
+            <input type="submit" value="Add" />
+
+        </form>
+        <h2 id="msg"/>
+       <script>
+           function add()
+        {
+            event.preventDefault();
+            let num1= document.getElementById("num1");
+            let num2= document.getElementById("num2");
+            let msg= document.getElementById("msg");
+            if (num1.value=="")
+            {
+                alert("Please Enter First Number");
+                msg.innerHTML="Please Enter First Number";
+                num1.focus();
+                return;
+            }
+            if (num2.value=="")
+            {
+                alert("Please Enter Second Number");
+                msg.innerHTML="Please Enter Second Number";
+                num2.focus();
+                return;
+            }
+            if (num2.value=="")
+            {
+                alert("Please Enter Second Number");
+                msg.innerHTML="Please Enter Second Number";
+                num2.focus();
+                return;
+            }
+            let n1= parseFloat(num1.value);
+            let n2= parseFloat(num2.value);
+            let ans= n1+n2;
+            let rep="addition =" + ans.toFixed(2);
+            msg.innerHTML=rep;
+        }
+       </script> 
+    </center>
+    
+</body>
+</html>
